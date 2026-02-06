@@ -1,0 +1,83 @@
+# =========================
+# OS & Editor
+# =========================
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# =========================
+# Logs
+# =========================
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =========================
+# Node.js
+# =========================
+node_modules/
+dist/
+build/
+.next/
+out/
+coverage/
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# =========================
+# React
+# =========================
+build/
+.eslintcache
+
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+venv/
+.venv/
+env/
+ENV/
+
+# =========================
+# Jupyter / ML
+# =========================
+.ipynb_checkpoints/
+*.h5
+*.pkl
+*.joblib
+
+# =========================
+# Database
+# =========================
+*.sqlite
+*.db
+*.sql
+
+# =========================
+# Docker
+# =========================
+.dockerignore
+
+# =========================
+# Temporary files
+# =========================
+tmp/
+temp/
+.cache/
