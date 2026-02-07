@@ -1,0 +1,27 @@
+# Artillery Load Test Configuration
+# Tests 200 concurrent requests to dashboard endpoint
+
+config:
+  target: 'https://esummit-backend-dun.vercel.app'
+  # For local testing, change to: 'http://localhost:3000'
+  phases:
+    - duration: 60  # Run for 60 seconds
+      arrivalRate: 200  # 200 requests per second
+  processor: "./artillery-helpers.js"
+  defaults:
+    headers:
+      Content-Type: "application/json"
+
+scenarios:
+  - name: "Dashboard Load Test"
+    weight: 100
+    flow:
+      - function: "setToken"
+      - get:
+          url: "/api/dashboard"
+          headers:
+            Authorization: "Bearer {{ token }}"
+          expect:
+            - statusCode: 200
+            - contentType: json
+      - think: 1  # Wait 1 second between requests

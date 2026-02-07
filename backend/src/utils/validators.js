@@ -29,10 +29,16 @@ const buyPassSchema = Joi.object({
   version: Joi.number().integer().min(0).optional(),
 });
 
+const upgradePassSchema = Joi.object({
+  expected_amount: Joi.number().integer().min(1).required(),
+  version: Joi.number().integer().min(0).optional(),
+});
+
 module.exports = {
   registerSchema,
   loginSchema,
   profileUpdateSchema,
   buyPassSchema,
+  upgradePassSchema,
 };
 

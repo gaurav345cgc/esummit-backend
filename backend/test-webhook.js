@@ -7,7 +7,7 @@ const crypto = require('crypto');
 const axios = require('axios');
 
 const WEBHOOK_SECRET = process.env.RAZORPAY_WEBHOOK_SECRET;
-const WEBHOOK_URL = process.env.WEBHOOK_URL || 'http://localhost:3000/api/webhook/razorpay';
+const WEBHOOK_URL = process.env.WEBHOOK_URL || 'https://esummit-backend-dun.vercel.app/api/webhook/razorpay';
 const ORDER_ID = process.argv[2];
 
 if (!ORDER_ID) {

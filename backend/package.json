@@ -6,7 +6,11 @@
   "scripts": {
     "dev": "nodemon server.js",
     "start": "node server.js",
-    "test": "jest"
+    "test": "jest",
+    "test:e2e": "node test-e2e-flow.js",
+    "test:e2e:prod": "node test-e2e-flow.js https://esummit-backend-dun.vercel.app",
+    "test:regression": "node test-regression-buy-list.js",
+    "test:regression:prod": "node test-regression-buy-list.js https://esummit-backend-dun.vercel.app"
   },
   "keywords": [],
   "author": "",
@@ -22,6 +26,7 @@
     "socket.io": "^4.8.3"
   },
   "devDependencies": {
+    "axios": "^1.7.7",
     "dotenv": "^16.4.5",
     "jest": "^29.7.0",
     "nodemon": "^3.1.0",
